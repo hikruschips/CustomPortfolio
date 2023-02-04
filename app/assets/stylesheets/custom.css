@@ -1,0 +1,111 @@
+body {
+  background-color: #23201f;
+  cursor: url('../../assets/props/dog-2.png'), auto
+}
+
+img {
+  image-rendering: pixelated;
+  position: absolute;
+}
+
+.centered-on-page {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grow:hover {
+  cursor: url('../../assets/props/dog-2.png'), auto
+/*  cursor: pointer;*/
+}
+
+.grow{-moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}
+.grow:focus,
+.grow:hover{-webkit-transform:scale(1.05);transform:scale(1.05)}
+.grow:active{-webkit-transform:scale(.9);transform:scale(.9)}
+
+.modal-header {
+/*  background-color: #dcdc80;*/
+color: #23201f;
+}
+
+/*.modal-dialog,*/
+.modal-content {
+  /* 80% of window height */
+  height: 100%;
+}
+
+.modal-body {
+  /* 100% = dialog height, 120px = header + footer */
+  max-height: calc(100% - 120px);
+/*  overflow-y: scroll;*/
+}
+
+@media (min-width: 390px) {
+  .img-fluid {
+    width: 87%;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-fluid {
+    width: 94%;
+  }
+}
+
+.grow {
+  cursor: pointer;
+}
+
+.carousel-item img {
+  max-height: 90vh;
+}
+
+.carousel-inner {
+  height: 500px;
+}
+
+.carousel-caption
+{
+  top: 46%;
+  padding-top: 18rem;
+  color: #23201f;
+}
+
+.text-align-center
+{
+  text-align:center;
+}
+
+.absolute 
+{
+  position: absolute;
+}
+
+a {
+  color: #23201f;
+}
+
+a:hover {
+  color: #23201f;
+}
+
+.display-none 
+{
+  display: none;
+}
+
+.orange
+{
+  color: #f0b503;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+/*.game-button
+{
+  position: fixed;
+  bottom: 0;
+  width: 160px;
+  left: calc(100% - 160px);
+}*/
