@@ -92,9 +92,4 @@ export function App() {
   
 }
 
-//game
-document.getElementById('play').onclick = function() {
-  // document.getElementsByClassName()
-}
-
 // const HelloMessage = ({ name }) => <h1>Hello, {name}!</h1>;
