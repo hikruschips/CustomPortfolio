@@ -4,7 +4,7 @@ body {
 }
 
 /*hack*/
-button:not(:disabled),[type=button]:not(:disabled)
+button:not(:disabled),[type=button]:not(:disabled),a:-webkit-any-link
 {
   cursor: url('../../assets/props/dog-2.png'), auto !important;
 }
