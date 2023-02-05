@@ -3,6 +3,10 @@ body {
   cursor: url('../../assets/props/dog-2.png'), auto
 }
 
+body *:hover {
+  cursor: url('../../assets/props/dog-2.png'), auto
+}
+
 img {
   image-rendering: pixelated;
   position: absolute;
