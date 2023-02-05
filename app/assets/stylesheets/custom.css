@@ -1,12 +1,13 @@
 body {
   background-color: #23201f;
-  cursor: url('../../assets/props/dog-2.png'), auto
+  cursor: url('../../assets/props/dog-2.png'), auto !important;
 }
 
-body *:hover {
-  cursor: url('../../assets/props/dog-2.png'), auto
+/*hack*/
+button:not(:disabled),[type=button]:not(:disabled)
+{
+  cursor: url('../../assets/props/dog-2.png'), auto !important;
 }
-
 img {
   image-rendering: pixelated;
   position: absolute;
@@ -20,8 +21,7 @@ img {
 }
 
 .grow:hover {
-  cursor: url('../../assets/props/dog-2.png'), auto
-/*  cursor: pointer;*/
+  cursor: url('../../assets/props/dog-2.png'), auto;
 }
 
 .grow{-moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}
@@ -30,13 +30,11 @@ img {
 .grow:active{-webkit-transform:scale(.9);transform:scale(.9)}
 
 .modal-header {
-/*  background-color: #dcdc80;*/
-color: #23201f;
+  color: #23201f;
 }
 
 /*.modal-dialog,*/
 .modal-content {
-  /* 80% of window height */
   height: 100%;
 }
 
@@ -56,10 +54,6 @@ color: #23201f;
   .img-fluid {
     width: 94%;
   }
-}
-
-.grow {
-  cursor: pointer;
 }
 
 .carousel-item img {
