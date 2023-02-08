@@ -83,11 +83,11 @@ export function App() {
   },1000)
 
   return (
-    <div>
+    <>
       {/*<h1>RoboFriends</h1>
       <SearchBox />*/}
     <Room roomLayout={roomLayout} tileSize={tileSize} />
-    </div>
+    </>
     )
   
 }

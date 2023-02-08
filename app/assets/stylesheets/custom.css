@@ -94,16 +94,9 @@ a:hover {
   display: none;
 }
 
-.orange
+.orange-font
 {
   color: #f0b503;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
-/*.game-button
-{
-  position: fixed;
-  bottom: 0;
-  width: 160px;
-  left: calc(100% - 160px);
-}*/

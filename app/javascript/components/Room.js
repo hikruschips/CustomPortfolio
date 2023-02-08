@@ -39,11 +39,14 @@ export class Room extends React.Component {
         // console.log("disabled")
       }
 
+      asset.floatHeight = asset.floatHeight === undefined ? 0 : asset.floatHeight
+
       let assetImgClass = asset.imgClass
       console.log(assetImgClass)
 
       if(asset.href !== undefined) {
         return (
+          <>
           <a
           href={asset.href}
           target="_blank" 
@@ -58,17 +61,18 @@ export class Room extends React.Component {
           />
           <h2
           id={asset.imgClass+'h2'}
-          className="absolute display-none orange"
+          className="absolute display-none orange-font"
           style={{ left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}}
-          >
+          >   
           {asset.floatText}
           </h2>
           </a>
+          </>
           )
       }
 
       return (
-        <span>
+        <>
         <img 
         {...modalProps}
         className={`${clickable === true ? ('grow ' + assetImgClass): (assetImgClass)}`}
@@ -79,19 +83,21 @@ export class Room extends React.Component {
         />
         <h2
         id={asset.imgClass+'h2'}
-        className="absolute display-none orange"
+        className="absolute display-none orange-font"
         style={{ left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}}
         >
         {asset.floatText}
         </h2>
-        </span>
+        </>
         )
     })
 
     return (
+      <>
       <div className="centered-on-page" style={{width: `${tileSize * 5}px`, height: `${tileSize * 5}px`}}>
       {assetsArray}
       </div>
+      </>
       )
   }
 }
