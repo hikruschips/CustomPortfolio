@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Card } from './Card';
+import { FloatTextImage } from './FloatTextImage';
 
 export class Room extends React.Component {
   render() {
@@ -44,6 +44,15 @@ export class Room extends React.Component {
       let assetImgClass = asset.imgClass
       console.log(assetImgClass)
 
+      const classNameStr = `${clickable === true ? ('grow ' + assetImgClass): (assetImgClass)}`
+      const widthStr = `${assetWidth * sizeFactor}px`
+      const heightStr = `${assetHeight * sizeFactor}px`
+      const style = {left : asset.positionX * tileSize, top : asset.positionY * tileSize }
+      const h2Id = asset.imgClass+'h2'
+      const h2Style = { left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}
+      const h2Text = asset.floatText
+
+
       if(asset.href !== undefined) {
         return (
           <>
@@ -51,7 +60,10 @@ export class Room extends React.Component {
           href={asset.href}
           target="_blank" 
           >
-          <img
+          <FloatTextImage modalProps={modalProps} classNameStr={classNameStr} src={src} widthStr={widthStr} heightStr={heightStr} style={style} h2Id={h2Id} h2Style={h2Style} h2Text={h2Text} />
+
+
+          {/*<img
           {...modalProps}
           className={`${clickable === true ? ('grow ' + assetImgClass): (assetImgClass)}`}
           src={src} 
@@ -65,30 +77,31 @@ export class Room extends React.Component {
           style={{ left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}}
           >   
           {asset.floatText}
-          </h2>
+          </h2>*/}
           </a>
           </>
           )
       }
 
       return (
-        <>
-        <img 
-        {...modalProps}
-        className={`${clickable === true ? ('grow ' + assetImgClass): (assetImgClass)}`}
-        src={src} 
-        width={`${assetWidth * sizeFactor}px`} 
-        height={`${assetHeight * sizeFactor}px`} 
-        style={{left : asset.positionX * tileSize, top : asset.positionY * tileSize }}
-        />
-        <h2
-        id={asset.imgClass+'h2'}
-        className="absolute display-none orange-font"
-        style={{ left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}}
-        >
-        {asset.floatText}
-        </h2>
-        </>
+        <FloatTextImage modalProps={modalProps} classNameStr={classNameStr} src={src} widthStr={widthStr} heightStr={heightStr} style={style} h2Id={h2Id} h2Style={h2Style} h2Text={h2Text} />
+        // <>
+        // <img 
+        // {...modalProps}
+        // className={`${clickable === true ? ('grow ' + assetImgClass): (assetImgClass)}`}
+        // src={src} 
+        // width={`${assetWidth * sizeFactor}px`} 
+        // height={`${assetHeight * sizeFactor}px`} 
+        // style={{left : asset.positionX * tileSize, top : asset.positionY * tileSize }}
+        // />
+        // <h2
+        // id={asset.imgClass+'h2'}
+        // className="absolute display-none orange-font"
+        // style={{ left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}}
+        // >
+        // {asset.floatText}
+        // </h2>
+        // </>
         )
     })
 
