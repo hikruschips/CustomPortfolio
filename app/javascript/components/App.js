@@ -1,6 +1,5 @@
 import React from 'react';
 import { CardList } from './CardList';
-import { SearchBox } from './SearchBox';
 import { Room } from './Room';
 import { roomLayout } from '../roomLayout.js';
 
@@ -51,45 +50,25 @@ export function App() {
 
     growElements = document.getElementsByClassName("grow")
 
-    // console.log(document.getElementsByClassName("grow")[0])
     if (hover === 'hover') {
       Array.prototype.forEach.call(growElements, function(growElement) {
         growElement.style.cssText += '-webkit-transform: scale(1.05);transform: scale(1.05);';
       });
 
-
-      // growElements.forEach(growElement =>{
-      //   console.log(growElement)
-      //   growElement.style.cssText += '-webkit-transform: scale(1.05);transform: scale(1.05);';
-      // })
-
-      // document.getElementsByClassName("grow")[0].style.cssText += '-webkit-transform: scale(1.05);transform: scale(1.05);';
-      // document.getElementsByClassName("grow")[0].classList.remove("mystyle");
       hover = ''
     }
     else {
       Array.prototype.forEach.call(growElements, function(growElement) {
         growElement.style.cssText += '-webkit-transform: scale(1.00);transform: scale(1.00);';
       });
-      // growElements.forEach(growElement =>{
-      //   growElement.style.cssText += '-webkit-transform: scale(1.00);transform: scale(1.00);';
-      // })
-      // document.getElementsByClassName("grow")[0].style.cssText += '-webkit-transform: scale(1.00);transform: scale(1.00);';
       hover = 'hover'
     }
-    // mouseEventName = (mouseEventName === 'mouseenter' ? 'mouseleave' : 'mouseenter')
-    // const mouseoverEvent = new MouseEvent(mouseEventName);
-    // document.getElementsByClassName("grow")[0].className = 'hover';/*.dispatchEvent(mouseoverEvent);*/
   },1000)
 
   return (
     <>
-      {/*<h1>RoboFriends</h1>
-      <SearchBox />*/}
     <Room roomLayout={roomLayout} tileSize={tileSize} />
     </>
     )
   
 }
-
-// const HelloMessage = ({ name }) => <h1>Hello, {name}!</h1>;

@@ -37,7 +37,6 @@ export class Room extends React.Component {
 
       if (asset.modal === undefined) {
         modalProps = {}
-        // console.log("disabled")
       }
 
       asset.floatHeight = asset.floatHeight === undefined ? 0 : asset.floatHeight
@@ -68,23 +67,6 @@ export class Room extends React.Component {
           target="_blank" 
           >
           <FloatTextImage modalProps={modalProps} classNameStr={classNameStr} src={src} widthStr={widthStr} heightStr={heightStr} style={style} h2Id={h2Id} h2Style={h2Style} h2Text={h2Text} />
-
-
-          {/*<img
-          {...modalProps}
-          className={`${clickable === true ? ('grow ' + assetImgClass): (assetImgClass)}`}
-          src={src} 
-          width={`${assetWidth * sizeFactor}px`} 
-          height={`${assetHeight * sizeFactor}px`} 
-          style={{left : asset.positionX * tileSize, top : asset.positionY * tileSize }}
-          />
-          <h2
-          id={asset.imgClass+'h2'}
-          className="absolute display-none orange-font"
-          style={{ left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}}
-          >   
-          {asset.floatText}
-          </h2>*/}
           </a>
           </>
           )
@@ -92,23 +74,6 @@ export class Room extends React.Component {
 
       return (
         <FloatTextImage modalProps={modalProps} classNameStr={classNameStr} src={src} widthStr={widthStr} heightStr={heightStr} style={style} h2Id={h2Id} h2Style={h2Style} h2Text={h2Text} />
-        // <>
-        // <img 
-        // {...modalProps}
-        // className={`${clickable === true ? ('grow ' + assetImgClass): (assetImgClass)}`}
-        // src={src} 
-        // width={`${assetWidth * sizeFactor}px`} 
-        // height={`${assetHeight * sizeFactor}px`} 
-        // style={{left : asset.positionX * tileSize, top : asset.positionY * tileSize }}
-        // />
-        // <h2
-        // id={asset.imgClass+'h2'}
-        // className="absolute display-none orange-font"
-        // style={{ left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}}
-        // >
-        // {asset.floatText}
-        // </h2>
-        // </>
         )
     })
 
