@@ -1,5 +1,6 @@
 import React from 'react';
 import { FloatTextImage } from './FloatTextImage';
+import { SimpleImage } from './SimpleImage';
 
 export class Room extends React.Component {
   render() {
@@ -51,6 +52,12 @@ export class Room extends React.Component {
       const h2Id = asset.imgClass+'h2'
       const h2Style = { left : asset.positionX * tileSize, top : asset.positionY * tileSize - asset.floatHeight}
       const h2Text = asset.floatText
+
+      if(asset.floatText === undefined) {
+        return (
+          <SimpleImage modalProps={modalProps} classNameStr={classNameStr} src={src} widthStr={widthStr} heightStr={heightStr} style={style} />
+          )
+      }
 
 
       if(asset.href !== undefined) {
